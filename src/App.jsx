@@ -19,13 +19,13 @@ function App() {
       <div className='secondBackground'>
 
         <div className='buttonHolder'>
-          <form>
+          <form onSubmit={e => e.preventDefault()}>
             <input value={pokeName} onChange={e => setPokeName(e.target.value)} placeholder='Type your Pokemon'/>
           </form>
 
           <AddPokemon thisPoke={findPokemon(pokeName)} holdTeam={holdTeam} setHoldTeam={setHoldTeam} teamSize={teamSize} setTeamSize={setTeamSize}/>
 
-          <form>
+          <form onSubmit={e => e.preventDefault()}>
             <input value={deletePoke} onChange={e => setDeletePoke(e.target.value)} placeholder='Type your Pokemon'/>
           </form>
           <DeletePokemon deletePoke={deletePoke} holdTeam={holdTeam} setHoldTeam={setHoldTeam} teamSize={teamSize} setTeamSize={setTeamSize}/>
